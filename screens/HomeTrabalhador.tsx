@@ -5,10 +5,10 @@ import {
   StyleSheet,
   ScrollView,
 } from "react-native";
-import { MapPin, Clock, Plus, LogOut } from "lucide-react-native";
+import { MapPin, Clock, Plus, User } from "lucide-react-native";
 import { useNavigation } from "@react-navigation/native";
 
-export default function TelaInicialAutonomo({onLogout}) {
+export default function TelaInicialAutonomo({}) {
   const navigation = useNavigation();
 
   const servicosSolicitados = [
@@ -45,17 +45,10 @@ export default function TelaInicialAutonomo({onLogout}) {
           </View>
         </View>
 
-        <TouchableOpacity style={styles.iconButton}>
-          <Clock size={26} />
-        </TouchableOpacity>
+        <TouchableOpacity style={styles.iconButton} onPress={() => navigation.navigate("Perfil")}>
+            <User size={24} />
+          </TouchableOpacity>
       </View>
-
-              <TouchableOpacity
-         style={styles.iconButton}
-         onPress={() => navigation.navigate("Login")}  
-        >
-        <LogOut size={22} />
-        </TouchableOpacity>
 
 
       {/* Serviços Solicitados */}

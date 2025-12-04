@@ -26,7 +26,6 @@ export default function TelaInicialCliente({ onLogout }) {
         <View style={styles.headerButtons}>
           <TouchableOpacity style={styles.iconButton} onPress={() => navigation.navigate("Perfil")}>
             <User size={24} />
-            
           </TouchableOpacity>
 
         </View>
